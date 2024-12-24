@@ -32,6 +32,15 @@ def authenticate_google_drive():
 # Function to download a file from Google Drive
 
 
+# def download_drive_file(service, file_id, destination_path):
+#     request = service.files().get_media(fileId=file_id)
+#     with open(destination_path, 'wb') as f:
+#         downloader = MediaIoBaseDownload(f, request)
+#         done = False
+#         while not done:
+#             status, done = downloader.next_chunk()
+#             print(f"Download progress: {int(status.progress() * 100)}%")
+#     return destination_path
 def download_drive_file(service, file_id, destination_path):
     request = service.files().get_media(fileId=file_id)
     with open(destination_path, 'wb') as f:
@@ -39,6 +48,6 @@ def download_drive_file(service, file_id, destination_path):
         done = False
         while not done:
             status, done = downloader.next_chunk()
-            print(f"Download progress: {int(status.progress() * 100)}%")
-    return destination_path
+            print(f"Download {int(status.progress() * 100)}% complete.")
+
 
