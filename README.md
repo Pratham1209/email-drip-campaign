@@ -6,9 +6,6 @@
     4. API endpoints with request and response examples.
     5. A Postman collection button for API testing.
 
-
-
-
 # Email Drip Campaign
 
 This project automates the generation, sending, and tracking of marketing emails using the Gemini API. The backend is implemented in Python using Flask, while the frontend is built with React. It also allows users to generate an Excel report with details of all emails sent.
@@ -44,9 +41,11 @@ pip install -r requirements.txt
 ```
 #### Set Up Environment Variables
 Create a .env file in the root of your project and add the following:
-######
+
 GEMINI_API_KEY=your_gemini_api_key
+
 EMAIL_ADDRESS=your_email@example.com
+
 EMAIL_PASSWORD=your_email_password
 ```
 Google Drive API Authentication
@@ -88,20 +87,19 @@ npm run dev
 
 - Once the emails are sent, you can download the tracking Excel file by clicking the "Download Excel" button. The file will contain all the details of the emails that were sent, including recipient name, email, subject, and body.
 
-```
-```
 ## API Endpoints
 POST /generate_emails
 
 Generates and sends the emails based on the provided input data.
 
 ```sh
-Post https://email-drip-campaign.onrender.com/generate_emails
+Post-https://email-drip-campaign.onrender.com/generate_emails
 ```
 
 Request:
 
 {
+```sh
   "accounts": [
 
     {
@@ -118,12 +116,15 @@ Request:
       "campaign_objective": "awareness"
     }
   ],
+  
   "number_of_emails": 1
 }
-
+```
+``
 Response:
-
+```sh
 {
+
     "campaigns": [
 
         {
@@ -138,7 +139,7 @@ Response:
         }
     ]
 }
-
+```
 GET /download_file
 
 Downloads the generated Excel file with email details.
