@@ -73,24 +73,27 @@ def generate_emails():
         task.result()
 
     return jsonify({"campaigns": campaigns}), 200
-
 @app.route('/download_file', methods=['GET'])
 def download_file():
-    # Get the file ID from the request (or use a default ID)
+    import os
+
+    # Get the file ID from the request
     file_id = request.args.get('file_id', '1ynbIxCcD-heVaIpSNUJADkDRZ-9yDKVX')
     
-    # Set a temporary destination path (file name inside the Downloads directory)
-    destination_path = os.path.join(os.path.expanduser('~'), 'Downloads', 'downloaded_file.xlsx')
+    # Define the directory and file path in /tmp
+    download_dir = '/tmp'
+    os.makedirs(download_dir, exist_ok=True)  # Ensure the directory exists
+    destination_path = os.path.join(download_dir, 'downloaded_file.xlsx')
     
     # Authenticate and download the file
     service = authenticate_google_drive()
     download_drive_file(service, file_id, destination_path)
     
-    # Send the file to the user for download
+    # Log the path for debugging
+    print(f"File downloaded to: {destination_path}")
+    
+    # Send the file to the frontend
     return send_file(destination_path, as_attachment=True, download_name="downloaded_file.xlsx")
 
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    app.run(debug=True)
