@@ -96,4 +96,5 @@ def download_file():
     return send_file(destination_path, as_attachment=True, download_name="downloaded_file.xlsx")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
