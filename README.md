@@ -41,7 +41,7 @@ pip install -r requirements.txt
 ```
 ```
 ```
-## Set Up Environment Variables
+### 3. Set Up Environment Variables
 
 - Create a .env file in the root of your project and add the following:
   
@@ -51,22 +51,19 @@ pip install -r requirements.txt
 
 - EMAIL_PASSWORD=your_email_password
   
-Google Drive API Authentication
-Download the credentials.json** file from the [Google Developer Console](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjpovrqlMGKAxVoDIMDHVEaOO0YABAAGgJzZg&co=1&ase=2&gclid=Cj0KCQiA1Km7BhC9ARIsAFZfEItbH9wQ8bJ2drufLtZimLUyBRKZEE0kc7_C2NnDlcpfS5PB7ajtupUaAn8lEALw_wcB&ei=dQ5rZ8LnEt7H4-EPgcibsQo&ohost=www.google.com&cid=CAESVeD2YcLFtPD6_6WVPmo9nP5ahfhiPjdjLsqwXNo8IZS_mBAI-MDRa28hcefHksy0yEll2EU8V10_lC1EK0eo_dciprkBfK9tKpzUSLjmVl73io5J9cs&sig=AOD64_3pwV00DMh916t11d2pB6VrhJS3pg&q&sqi=2&nis=4&adurl&ved=2ahUKEwiC9vXqlMGKAxXe4zgGHQHkJqYQ0Qx6BAgNEAE).
+## Google Drive API Authentication
+## Download the credentials.json** file from the [Google Developer Console](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjpovrqlMGKAxVoDIMDHVEaOO0YABAAGgJzZg&co=1&ase=2&gclid=Cj0KCQiA1Km7BhC9ARIsAFZfEItbH9wQ8bJ2drufLtZimLUyBRKZEE0kc7_C2NnDlcpfS5PB7ajtupUaAn8lEALw_wcB&ei=dQ5rZ8LnEt7H4-EPgcibsQo&ohost=www.google.com&cid=CAESVeD2YcLFtPD6_6WVPmo9nP5ahfhiPjdjLsqwXNo8IZS_mBAI-MDRa28hcefHksy0yEll2EU8V10_lC1EK0eo_dciprkBfK9tKpzUSLjmVl73io5J9cs&sig=AOD64_3pwV00DMh916t11d2pB6VrhJS3pg&q&sqi=2&nis=4&adurl&ved=2ahUKEwiC9vXqlMGKAxXe4zgGHQHkJqYQ0Qx6BAgNEAE).
+## Replace the credentials.json file in the backend directory with your file.
+## token.json will be automatically created when the backend is first run.
 
-Replace the credentials.json file in the backend directory with your file.
 
-token.json will be automatically created when the backend is first run.
-
-```
-```
-Run the Backend
+### 4. Run the Backend
 To start the backend server, run:
    ```sh
    python app.py
 
 ```
-### Set Up the Frontend
+### 5. Set Up the Frontend
 Install Node.js Dependencies
 
 Navigate to the frontend directory and install the necessary packages using npm:
@@ -81,7 +78,7 @@ To start the frontend development server, run:
 npm run dev
 ```
 
-### Generate Emails
+### 6. Generate Emails
 
 - Navigate to the frontend application.
 
@@ -93,7 +90,7 @@ npm run dev
 
 - Once the emails are sent, you can download the tracking Excel file by clicking the "Download Excel" button. The file will contain all the details of the emails that were sent, including recipient name, email, subject, and body.
 
-## API Endpoints
+### 7. API Endpoints
 POST /generate_emails
 
 Generates and sends the emails based on the provided input data.
@@ -156,10 +153,12 @@ Downloads the generated Excel file with email details.
 ```sh
 GET https://your-backend-url.com/download_file?file_id=your_file_id
 ```
-### Postman Collection
+### 8. Postman Collection
 You can import the Postman collection for testing the API:
 
 [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/33785306-3abe4073-7c3b-4fa5-bd34-f06b9184c756?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D33785306-3abe4073-7c3b-4fa5-bd34-f06b9184c756%26entityType%3Dcollection%26workspaceId%3D45dfb44a-9237-41be-9edd-bdba79abe8cd)
+
+### Thank you!!
 
 
 
