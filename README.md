@@ -39,8 +39,6 @@ Ensure you're using a virtual environment, then install the required Python depe
  ```sh
 pip install -r requirements.txt
 ```
-```
-```
 ### 3. Set Up Environment Variables
 
 - Create a .env file in the root of your project and add the following:
@@ -50,12 +48,12 @@ pip install -r requirements.txt
 - EMAIL_ADDRESS=your_email@example.com
 
 - EMAIL_PASSWORD=your_email_password
-  
-## Google Drive API Authentication
-## Download the credentials.json** file from the [Google Developer Console](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjpovrqlMGKAxVoDIMDHVEaOO0YABAAGgJzZg&co=1&ase=2&gclid=Cj0KCQiA1Km7BhC9ARIsAFZfEItbH9wQ8bJ2drufLtZimLUyBRKZEE0kc7_C2NnDlcpfS5PB7ajtupUaAn8lEALw_wcB&ei=dQ5rZ8LnEt7H4-EPgcibsQo&ohost=www.google.com&cid=CAESVeD2YcLFtPD6_6WVPmo9nP5ahfhiPjdjLsqwXNo8IZS_mBAI-MDRa28hcefHksy0yEll2EU8V10_lC1EK0eo_dciprkBfK9tKpzUSLjmVl73io5J9cs&sig=AOD64_3pwV00DMh916t11d2pB6VrhJS3pg&q&sqi=2&nis=4&adurl&ved=2ahUKEwiC9vXqlMGKAxXe4zgGHQHkJqYQ0Qx6BAgNEAE).
-## Replace the credentials.json file in the backend directory with your file.
-## token.json will be automatically created when the backend is first run.
-
+```
+ - Google Drive API Authentication
+ - Download the credentials.json** file from the [Google Developer Console](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjpovrqlMGKAxVoDIMDHVEaOO0YABAAGgJzZg&co=1&ase=2&gclid=Cj0KCQiA1Km7BhC9ARIsAFZfEItbH9wQ8bJ2drufLtZimLUyBRKZEE0kc7_C2NnDlcpfS5PB7ajtupUaAn8lEALw_wcB&ei=dQ5rZ8LnEt7H4-EPgcibsQo&ohost=www.google.com&cid=CAESVeD2YcLFtPD6_6WVPmo9nP5ahfhiPjdjLsqwXNo8IZS_mBAI-MDRa28hcefHksy0yEll2EU8V10_lC1EK0eo_dciprkBfK9tKpzUSLjmVl73io5J9cs&sig=AOD64_3pwV00DMh916t11d2pB6VrhJS3pg&q&sqi=2&nis=4&adurl&ved=2ahUKEwiC9vXqlMGKAxXe4zgGHQHkJqYQ0Qx6BAgNEAE).
+ - Replace the credentials.json file in the backend directory with your file.
+ - token.json will be automatically created when the backend is first run.
+```
 
 ### 4. Run the Backend
 To start the backend server, run:
